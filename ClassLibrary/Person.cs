@@ -8,15 +8,21 @@ namespace ClassLibrary
 {
     public class Person
     {
-        private string name { get; set; }
-        private string surname { get; set; }
-        private int age { get; set; }
+        private string name;
+        private string surname;
+        private int age;
 
         public Person(string name, string surname, int age)
         {
             this.name = name;
             this.surname = surname;
             this.age = age;
+        }
+        public Person()
+        {
+            this.name = "";
+            this.surname = "";
+            this.age = 0;
         }
 
         public string Name
@@ -36,17 +42,17 @@ namespace ClassLibrary
             get { return this.age; }
             set { this.age = value; }
         }
-
-        public void GetInformation()
-        {
-            Console.WriteLine("Name: " + this.Name + "\nSurname: " + this.Surname + "\nAge: " + this.Age);
-        }
     }
-    public class Collection
+    public class StaticMethod
     {
-        public Person ListCollection(Person p)
+        public static Person GetInfo(out Person p)
         {
-            return 
+            Person res = new ClassLibrary.Person();
+            res.Name = "Kaldr";
+            res.Surname = "Merg";
+            res.Age = 23;
+            p = res;
+            return p;
         }
     }
 }

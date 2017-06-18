@@ -13,7 +13,12 @@ namespace Namespace
     {
         static void Main(string[] args)
         {
-            cl.Person p1 = new cl.Person("Kaldr", "Merg", 23);
+            cl.Person pers = new cl.Person();
+            cl.StaticMethod.GetInfo(out pers);
+            Console.WriteLine("Задание 1\nName: " + pers.Name + "\nSurname: " + pers.Surname + "\nAge: " + pers.Age + "\n\n");
+
+            cl.Constants con = new cl.Constants();
+            Console.WriteLine("Задание 2\nName: " + con.Name + "\nSurname: " + con.Surname + "\nAge: " + con.Age + "\nWeight: " + con.Weight + "\n\n");
         }
     }
 }
