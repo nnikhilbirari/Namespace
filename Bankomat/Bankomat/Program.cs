@@ -17,11 +17,11 @@ namespace Bankomat
             Random r = new Random();
             int rand = r.Next(3, 7);
             Console.WriteLine("\t\t\t**********Открываем счет**********");
-            //for (int i = 0; i < rand; i++)
-            //{
-            //    Console.Write(" .");
-            //    Thread.Sleep(1000);
-            //}
+            for (int i = 0; i < rand; i++)
+            {
+                Console.Write(" .");
+                Thread.Sleep(1000);
+            }
 
             //создание счета (получение номера и инициализация пароля)
             ac.Account acc = new ac.Account();
